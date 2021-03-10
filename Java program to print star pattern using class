@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Pattern1{
+	private int num;
+	public void setNum(int num){
+		this.num=num;
+	}
+	public int getNum(){
+		return this.num;
+	}
+	public void printAnswer(){
+		for(int i=1;i<=getNum();i++){
+			for(int j=1;j<=i;j++){
+				System.out.print(" *");
+			}
+			System.out.println();
+		}
+	}
+	public void inputNum(){
+        Scanner sc  =   new Scanner(System.in);
+        System.out.print("Enter Number  : ");
+        int num =   sc.nextInt();
+		setNum(num);
+	}
+	
+	public static void main(String[] ar){
+		Pattern1 ob = new Pattern1();
+		ob.inputNum();
+		ob.printAnswer();
+		
+	}
+}
